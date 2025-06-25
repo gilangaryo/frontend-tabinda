@@ -1,6 +1,6 @@
 'use client'
 
-import { useKeenSlider } from 'keen-slider/react'
+import { useKeenSlider, KeenSliderInstance } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import { useState } from 'react'
 
@@ -38,10 +38,15 @@ export default function CarouselClient() {
     },
   })
 
-  const updatePerView = (slider: any) => {
+  const updatePerView = (slider: KeenSliderInstance) => {
     const options = slider.options.slides
-    if (typeof options === 'object' && options && 'perView' in options) {
-      setPerView(options.perView ?? 1)
+    if (
+      typeof options === 'object' &&
+      options !== null &&
+      'perView' in options &&
+      typeof options.perView === 'number'
+    ) {
+      setPerView(options.perView)
     } else {
       setPerView(1)
     }
