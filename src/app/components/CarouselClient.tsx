@@ -7,6 +7,7 @@ import { useState } from 'react'
 export default function CarouselClient() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
+  const [perView, setPerView] = useState(1)
 
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
@@ -28,10 +29,23 @@ export default function CarouselClient() {
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
     },
-    created() {
+    created(slider) {
       setLoaded(true)
+      updatePerView(slider)
+    },
+    updated(slider) {
+      updatePerView(slider)
     },
   })
+
+  const updatePerView = (slider: any) => {
+    const options = slider.options.slides
+    if (typeof options === 'object' && options && 'perView' in options) {
+      setPerView(options.perView ?? 1)
+    } else {
+      setPerView(1)
+    }
+  }
 
   const data = [
     'Rima',
@@ -45,34 +59,28 @@ export default function CarouselClient() {
     'Jamal',
   ]
 
+  const totalDots = Math.ceil(data.length / perView)
+
   return (
     <div className="relative w-full col-span-full text-[--color-primary]">
       <div ref={sliderRef} className="keen-slider">
         {data.map((name, idx) => (
           <div
             key={idx}
-            className="keen-slider__slide bg-gray-100 shadow p-6 rounded-lg mx-auto w-full "
+            className="keen-slider__slide bg-gray-100 shadow p-8 rounded-lg mx-auto w-full"
           >
-            <p className="text-sm mb-4">
+            <p className="text-base mb-4">
               Produk Tabista sangat nyaman dan desainnya sesuai syari. Saya merasa lebih percaya diri dalam menjalani hijrah
             </p>
-            <p className="text-sm text-right">- {name}</p>
+            <p className="text-sm text-right font-semibold">- {name}</p>
           </div>
         ))}
       </div>
 
       {/* Dots */}
-      {loaded && instanceRef.current && (
-        <div className="flex justify-center mt-4 gap-2">
-          {[
-            ...Array(
-              Math.ceil(
-                instanceRef.current.track.details.slides.length /
-                  (instanceRef.current.options.slides?.perView || 1)
-              )
-            ).keys(),
-          ].map((idx) => {
-            const perView = instanceRef.current?.options.slides?.perView || 1
+      {loaded && (
+        <div className="flex justify-center mt-6 gap-2">
+          {[...Array(totalDots).keys()].map((idx) => {
             const isActive =
               currentSlide >= idx * perView &&
               currentSlide < (idx + 1) * perView
@@ -82,7 +90,7 @@ export default function CarouselClient() {
                 key={idx}
                 onClick={() => instanceRef.current?.moveToIdx(idx * perView)}
                 className={`h-1 rounded-full transition-all duration-300 cursor-pointer ${
-                  isActive ? 'bg-gray-800 w-8' : 'bg-gray-200 w-8'
+                  isActive ? 'bg-[--color-primary] w-8' : 'bg-gray-300 w-4'
                 }`}
               />
             )
