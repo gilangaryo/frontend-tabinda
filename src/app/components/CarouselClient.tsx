@@ -95,7 +95,7 @@ export default function CarouselClient() {
                 key={idx}
                 onClick={() => instanceRef.current?.moveToIdx(idx * perView)}
                 className={`h-1 rounded-full transition-all duration-300 cursor-pointer ${
-                  isActive ? 'bg-[--color-primary] w-8' : 'bg-gray-300 w-4'
+                  isActive ? 'bg-primary w-8' : 'bg-gray-300 w-4'
                 }`}
               />
             )

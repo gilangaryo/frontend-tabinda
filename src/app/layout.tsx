@@ -42,7 +42,13 @@ const avenirNext = localFont({
 
 export const metadata: Metadata = {
   title: "Tabinda Hijab",
-  description: "",
+  description: "Unveiling the Modest Muslim — Koleksi hijab dan abaya elegan dengan sentuhan etika dan nilai.",
+  keywords: [
+    "Hijab", "Abaya", "Busana Muslim", "Tabinda", "Fashion Muslimah",
+    "Modest Fashion", "Syari", "Ethical Fashion", "Hijab Indonesia"
+  ],
+  creator: "Tabinda Team",
+  publisher: "Tabinda Hijab",
 };
 
 export default function RootLayout({
@@ -51,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body
         className={`${Baskerville.variable} ${avenirNext.variable} antialiased`}
       >

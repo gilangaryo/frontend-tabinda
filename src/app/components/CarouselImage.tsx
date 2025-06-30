@@ -20,9 +20,9 @@ export default function CarouselImage() {
   })
 
   const images = [
-    '/hero-section.jpg',
-    '/hero-section.jpg',
-    '/hero-section.jpg',
+    '/collaboration/collaboration1.png',
+    '/collaboration/collaboration2.png',
+    '/collaboration/collaboration3.png',
   ]
 
   return (
