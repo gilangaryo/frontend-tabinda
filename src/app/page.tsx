@@ -3,8 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from './components/Navbar';
-import CarouselImage from './components/CarouselImage';
-import CarouselClient from './components/CarouselClient';
+// import CarouselImage from './components/CarouselImage';
+// import CarouselClient from './components/CarouselClient';
 export default function LandingPage() {
   return (
     
