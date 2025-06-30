@@ -30,7 +30,6 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="absolute bottom-10 w-full z-10 flex flex-col md:flex-row justify-center md:justify-around items-center gap-4 md:gap-8 text-white px-4">
-  
             {/* Hidden di mobile */}
             <h2 className="hidden md:block text-3xl font-light italic before:content-['•'] before:mr-2">
               Respecting Ethics
@@ -128,36 +127,43 @@ export default function LandingPage() {
           <h1 className="text-6xl font-light mb-2 py-2">Explore Our Collection of</h1>
           <h1 className="text-4xl font-light mb-2 py-2 italic">Meaningful Modesty</h1>
         </div>
+
+        <div className="absolute bottom-10 w-full z-10 flex flex-col md:flex-row justify-center md:justify-around items-center gap-4 md:gap-8 text-white px-4">
+            <h2 className="">
+              Untuk memperkenalkan brand ini dengan lebih jelas dan profesional, baik kepada calon mitra, klien, maupun komunitas yang lebih luas. Maka dibuatlah company profile untuk mendukung kebutuhan tersebut.
+            </h2>
+
+          </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-white py-10 text-center text-sm text-gray-600">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
+      <footer className="bg-white py-10 text-left text-sm text-gray-600">
+        <div className="mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-4 w-full">
           <div>
-            <h3 className="font-semibold mb-2">Your Hijrah Journey</h3>
-            <p>Unveiling the beauty of simplicity, sincerity & modest fashion.</p>
+            <h3 className="font-light mb-2 italic">Your Hijab Journey</h3>
+            <p>Tabinda is here to elevate the value of simplicity in dressing without sacrificing aesthetics.</p>
           </div>
           <div>
-            <h3 className="font-semibold mb-2">Discover</h3>
+            <h3 className="font-light mb-2 italic">Discover</h3>
             <ul>
               <li><Link href="/article">Article</Link></li>
               <li><Link href="/collaboration">Collaboration</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-2">Navigation</h3>
+            <h3 className="font-light mb-2 italic">Navigation</h3>
             <ul>
               <li><Link href="/product">Product</Link></li>
               <li><Link href="/about">About</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-2">Contact</h3>
+            <h3 className="font-light mb-2 italic">Contact</h3>
             <p>Tabinda@gmail.com</p>
-            <p>+62 856 2469 999</p>
+            <p>+62 0855-250-99</p>
           </div>
+          <p className="mt-6">Copyright © 2025 Tabinda</p>
         </div>
-        <p className="mt-6">© 2025 Tabista</p>
       </footer>
     </div>
   );
