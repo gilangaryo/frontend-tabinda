@@ -8,7 +8,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --font-heading: 'Dit Magi', serif;
-  --font-body: 'Raleway', sans-serif;
+  --font-body: 'Raleway', system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: light) {
