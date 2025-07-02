@@ -7,8 +7,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-sans: var(--font-avenir);
-  --font-heading: var(--font-baskerville);
+  --font-heading: 'Dit Magi', serif;
+  --font-body: 'Raleway', sans-serif;
 }
 
 @media (prefers-color-scheme: light) {
@@ -21,50 +21,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-}
-
-
-@font-face {
-  font-family: 'Baskerville';
-  src: url('/fonts/Basker-variable.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Baskerville';
-  src: url('/fonts/Basker-italic.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: italic;
-}
-
-
-@font-face {
-  font-family: 'Avenir Next LT Pro';
-  src: url('/fonts/AvenirLTProBook.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro';
-  src: url('/fonts/AvenirLTProMedium.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro';
-  src: url('/fonts/AvenirLTProHeavy.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
+  font-family: var(--font-body);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), serif;
+  font-family: var(--font-heading);
 }
 
 p, span, a, li, button {
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-body);
 }

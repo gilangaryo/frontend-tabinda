@@ -2,42 +2,27 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 
-const Baskerville = localFont({
-  src: [
-    {
-      path: "./fonts/Basker-variable.ttf",
-      weight: "100 900",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Basker-italic.ttf",
-      weight: "100 900",
-      style: "italic",
-    },
-  ],
+// Heading: Dit Magi
+const ditMagi = localFont({
+  src: "./fonts/Dit-Magi.otf",
   variable: "--font-heading",
 });
 
-
-const avenirNext = localFont({
+// Body: Raleway
+const raleway = localFont({
   src: [
     {
-      path: "./fonts/AvenirLTProBook.otf",
+      path: "./fonts/Raleway.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/AvenirLTProMedium.otf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "./fonts/AvenirLTProHeavy.otf",
-      weight: "700",
-      style: "normal",
+      path: "./fonts/Raleway-Italic.ttf",
+      weight: "400",
+      style: "italic",
     },
   ],
-  variable: "--font-avenir",
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
@@ -58,9 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body
-        className={`${Baskerville.variable} ${avenirNext.variable} antialiased`}
-      >
+      <body className={`${ditMagi.variable} ${raleway.variable} antialiased`}>
         {children}
       </body>
     </html>

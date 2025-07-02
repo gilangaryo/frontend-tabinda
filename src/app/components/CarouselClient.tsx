@@ -77,7 +77,7 @@ export default function CarouselClient() {
             <p className="text-base mb-4">
               Produk Tabista sangat nyaman dan desainnya sesuai syari. Saya merasa lebih percaya diri dalam menjalani hijrah
             </p>
-            <p className="text-sm text-right font-semibold">- {name}</p>
+            <p className="text-sm text-right">- {name}</p>
           </div>
         ))}
       </div>
