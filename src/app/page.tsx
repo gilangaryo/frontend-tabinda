@@ -11,10 +11,17 @@ export default function LandingPage() {
     <div className="text-2xl text-primary">
 
       {/* Hero Section */}
-      <section className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url('/hero-section.jpg')` }}>
+      <section className="relative h-screen bg-cover bg-center">
         {/* Navbar */}
         <Navbar />
-        <div className="absolute inset-0" />
+        <Image
+          src="/hero-section.jpg"
+          alt="Hero background"
+          layout="fill"
+          objectFit="cover"
+          priority
+          className="z-0"
+        />
         <div className="relative z-10 -top-30 flex flex-col items-center justify-center h-full text-white  px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 mb-8 text-center items-center">
             <div className=" text-center md:text-left italic">
@@ -31,7 +38,7 @@ export default function LandingPage() {
           </div>
           <div className="absolute bottom-10 w-full z-10 flex flex-col md:flex-row justify-center md:justify-around items-center gap-4 md:gap-8 text-white px-4">
             {/* Hidden di mobile */}
-            <h2 className="hidden md:block text-3xl font-light italic before:content-['•'] before:mr-2">
+            <h2 className="hidden md:block text-3xl italic before:content-['•'] before:mr-2">
               Respecting Ethics
             </h2>
 
@@ -42,7 +49,7 @@ export default function LandingPage() {
             </Link>
 
             {/* Hidden di mobile */}
-            <h2 className="hidden md:block text-3xl font-light italic before:content-['•'] before:mr-2">
+            <h2 className="hidden md:block text-3xl italic before:content-['•'] before:mr-2">
               Honoring Values
             </h2>
           </div>

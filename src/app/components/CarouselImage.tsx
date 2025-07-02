@@ -33,7 +33,6 @@ export default function CarouselImage() {
   const startX = useRef(0)
   const autoSlideRef = useRef<NodeJS.Timeout | null>(null)
 
-  // Handle viewport width (safe for SSR)
   useEffect(() => {
     const handleResize = () => setViewportWidth(window.innerWidth)
     handleResize()
@@ -41,7 +40,6 @@ export default function CarouselImage() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  // Auto slide every 5 seconds
   useEffect(() => {
     const timeout = setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
