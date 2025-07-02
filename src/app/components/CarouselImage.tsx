@@ -43,11 +43,17 @@ export default function CarouselImage() {
 
   // Auto slide every 5 seconds
   useEffect(() => {
-    autoSlideRef.current = setTimeout(() => {
+    const timeout = setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 50000)
-    return () => autoSlideRef.current && clearTimeout(autoSlideRef.current)
+    }, 8000)
+
+    autoSlideRef.current = timeout
+
+    return () => {
+      clearTimeout(timeout)
+    }
   }, [currentSlide])
+
 
   const [dragging, setDragging] = useState(false)
 
