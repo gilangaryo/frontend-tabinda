@@ -9,6 +9,7 @@
   --foreground: #171717;
   --font-heading: 'Dit Magi', serif;
   --font-body: 'Raleway', system-ui, sans-serif;
+  --swiper-theme-color: #014228;
 }
 
 @media (prefers-color-scheme: light) {
@@ -30,4 +31,20 @@ h1, h2, h3, h4, h5, h6 {
 
 p, span, a, li, button {
   font-family: var(--font-body);
+}
+
+
+.swiper .swiper-pagination-bullet {
+  width: 24px;
+  height: 4px;
+  border-radius: 9999px;
+  background-color: #D1D5DB !important;
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: #014228 !important;
+  width: 28px;
 }

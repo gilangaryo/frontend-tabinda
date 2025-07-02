@@ -75,7 +75,7 @@ export default function CarouselClient() {
             className="keen-slider__slide bg-gray-100 shadow p-8 rounded-lg mx-auto w-full"
           >
             <p className="text-base mb-4">
-              Produk Tabista sangat nyaman dan desainnya sesuai syari. Saya merasa lebih percaya diri dalam menjalani hijrah
+              Produk Tabinda sangat nyaman dan desainnya sesuai syari. Saya merasa lebih percaya diri dalam menjalani hijrah
             </p>
             <p className="text-sm text-right">- {name}</p>
           </div>
