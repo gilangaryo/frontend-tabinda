@@ -6,6 +6,7 @@ import localFont from "next/font/local";
 const ditMagi = localFont({
   src: "./fonts/Dit-Magi.otf",
   variable: "--font-heading",
+  display: "swap",
 });
 
 // Body: Raleway
@@ -23,6 +24,7 @@ const raleway = localFont({
     },
   ],
   variable: "--font-body",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
