@@ -28,7 +28,7 @@ export default function LandingPage() {
               <h2>Abaya</h2>
             </div>
             <div className="col-span-2 text-center md:text-center mx-4">
-              <h1 className=" text-4xl md:text-5xl font-light mb-4 mt-4  ">
+              <h1 className=" text-4xl md:text-5xl mb-4 mt-4  ">
                 Unveiling the Modest Muslim
               </h1>
             </div>
