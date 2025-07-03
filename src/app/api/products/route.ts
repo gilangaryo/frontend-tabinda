@@ -26,21 +26,3 @@ export async function POST(req: Request) {
 
   return NextResponse.json(newProduct, { status: 201 });
 }
-
-export async function PUT(req: Request, { params }: { params: { id: string } }) {
-  const body = await req.json();
-  const updated = await prisma.product.update({
-    where: { id: parseInt(params.id) },
-    data: {
-      name: body.name,
-      description: body.description,
-      category: body.category,
-      section: body.section,
-      price: body.price,
-      buttonText: body.buttonText,
-      link: body.link,
-    },
-  });
-
-  return NextResponse.json(updated);
-}
