@@ -6,7 +6,7 @@ import { Save } from 'lucide-react';
 
 export default function ProductEditPage() {
   const router = useRouter();
-  const params = useParams(); // ✅ ambil ID dari URL
+  const params = useParams();
   const id = params?.id as string;
 
   const [form, setForm] = useState({
@@ -18,19 +18,26 @@ export default function ProductEditPage() {
     buttonText: 'Shop Now',
     link: '',
   });
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Simulasi fetch dari database
-    const dummyData = {
-      name: 'SANDYAKALA',
-      description: 'Sawda Abaya eksklusif Tabinda',
-      category: 'Hijab',
-      section: 'Product Collection',
-      price: '200000',
-      buttonText: 'Buy Now',
-      link: 'https://tokopedia.com/tabinda/sandyakala',
+    const fetchProduct = async () => {
+      const res = await fetch(`/api/products/${id}`);
+      if (res.ok) {
+        const data = await res.json();
+        setForm({
+          name: data.name || '',
+          description: data.description || '',
+          category: data.category || '',
+          section: data.section || '',
+          price: data.price?.toString() || '',
+          buttonText: data.buttonText || 'Shop Now',
+          link: data.link || '',
+        });
+      }
     };
-    setForm(dummyData);
+
+    if (id) fetchProduct();
   }, [id]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -38,10 +45,26 @@ export default function ProductEditPage() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('UPDATE PRODUCT:', form);
-    router.push('/dashboard/products');
+    setLoading(true);
+
+    const res = await fetch(`/api/products/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        ...form,
+        price: parseInt(form.price),
+      }),
+    });
+
+    setLoading(false);
+
+    if (res.ok) {
+      router.push('/dashboard/products');
+    } else {
+      alert('Gagal update produk');
+    }
   };
 
   return (
@@ -49,10 +72,16 @@ export default function ProductEditPage() {
       <div className="flex justify-between items-center mb-6">
         <div>
           <h1 className="text-2xl font-serif italic">Edit Product</h1>
-          <p className="text-sm text-gray-500">Edit product info for: <strong>{id}</strong></p>
+          <p className="text-sm text-gray-500">
+            Edit product info for: <strong>{id}</strong>
+          </p>
         </div>
-        <button type="submit" className="flex items-center gap-2 bg-green-700 text-white px-4 py-2 rounded text-sm hover:bg-green-800">
-          <Save size={16} /> Save Changes
+        <button
+          type="submit"
+          disabled={loading}
+          className="flex items-center gap-2 bg-green-700 text-white px-4 py-2 rounded text-sm hover:bg-green-800 disabled:opacity-50"
+        >
+          <Save size={16} /> {loading ? 'Saving...' : 'Save Changes'}
         </button>
       </div>
 
