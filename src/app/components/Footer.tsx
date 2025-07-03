@@ -43,7 +43,7 @@ export default function Footer() {
         <div className='col-span-1 items-center text-center md:text-left'>
           <p className="mb-2 font-semibold">Navigation</p>
           <ul className='text-xs'>
-            <li><Link href="/product">Product</Link></li>
+            <li><Link href="/products">Product</Link></li>
             <li><Link href="/about">About</Link></li>
           </ul>
         </div>

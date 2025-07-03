@@ -1,12 +1,13 @@
 'use client'
 
-import Image from "next/image";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default function QuoteCarousel() {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const quotes = [
     {
       quote: "Sesungguhnya Allah Maha Indah dan Mencintai Keindahan",
@@ -29,13 +30,10 @@ export default function QuoteCarousel() {
     <>
       <div className="grid grid-cols-3 items-center text-sm text-[#014228]">
         <div className="text-left italic">Tabinda</div>
-        <div className="text-center">
-          <Image src="/denu.png" alt="Quote Icon" width={30} height={30} className="inline-block" />
-        </div>
+        <div className="text-center">{currentSlide + 1}</div>
         <div className="text-right italic">Your Hijrah Journey</div>
       </div>
 
-     
       <div className="max-w-full mx-auto text-center">
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -43,6 +41,7 @@ export default function QuoteCarousel() {
           autoplay={{ delay: 8000 }}
           loop
           className="!pb-10"
+          onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
         >
           {quotes.map((item, i) => (
             <SwiperSlide key={i}>

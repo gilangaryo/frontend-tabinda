@@ -130,7 +130,7 @@ export default function LandingPage() {
         <QuoteCarousel />
       </section>
 
-      {/* Testimoni */}
+      {/* Transformative Client */}
       <section className="py-20 px-4 max-w-3xl mx-auto">
         <h1 className="text-4xl text-center mb-10">Transformative Client Experiences</h1>
         <CarouselClient/>
@@ -141,35 +141,36 @@ export default function LandingPage() {
       <section className="relative bg-cover bg-center h-[860] md:h-[500px] text-center md:text-left" style={{ backgroundImage: `url('/explore.png')` }}>
         <div className="relative z-10 flex flex-col h-full text-white px-3 md:px-8 py-5">
           <p className=" py-2">Your Hijab Journey</p>
-          <p className="text-3xl font-bold md:text-6xl py-2">Explore Our Collection of</p>
-          <p className="text-3xl font-bold md:text-6xl py-2 italic">Meaningful Modesty</p>
+          <p className="text-3xl font-bold lg:text-6xl sm:text-5xl py-2">Explore Our Collection of</p>
+          <p className="text-3xl font-bold lg:text-6xl sm:text-5xl py-2 italic">Meaningful Modesty</p>
         </div>
 
         <div className="absolute bottom-10 w-full z-10 flex flex-col md:flex-row justify-center md:justify-around items-center text-white px-8 mt-20">
-            <div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
-              <div className='col-span-1 md:col-span-3 content-end'>
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+              <div className="col-span-1 md:col-span-3 content-end text-white">
                 <h2 className="text-2xl font-light mb-4">
                   Untuk memperkenalkan brand ini dengan lebih jelas dan profesional, baik kepada calon mitra, klien, maupun komunitas yang lebih luas. Maka dibuatlah company profile untuk mendukung kebutuhan tersebut.
                 </h2>
               </div>
-              <div className='col-span-1 md:col-span-1'>
 
-              </div>
-              <div className='col-span-1 md:col-span-1  rounded shadow text-gray-600 text-center '>
-                <div className='card bg-white p-3 max-w-xs mx-auto rounded-xl'>
-                  <Image src="/explore-collection.jpg" alt="Girlie Mukena" width={300} height={300} className="mx-auto mb-4 rounded-lg" />
-                  <p className='font-semibold my-4'>Girlie Mukena Edition</p>
+              <div className="col-span-1 md:col-start-5 md:col-span-2 text-gray-600 text-center">
+                <div className="bg-white p-4 max-w-xs mx-auto rounded-xl shadow-lg">
+                  <Image
+                    src="/explore-collection.jpg"
+                    alt="Girlie Mukena"
+                    width={300}
+                    height={300}
+                    className="mx-auto mb-4 rounded-lg"
+                  />
+                  <p className="font-semibold my-4 md:text-xl">Girlie Mukena Edition</p>
                   <Link href="/products">
-                    <button className="w-full py-1 bg-primary text-white hover:bg-opacity-90 transition-colors duration-300 text-lg rounded-full">
-
+                    <button className="w-full py-2 bg-primary text-white hover:bg-opacity-90 transition-colors duration-300 text-lg rounded-full">
                       View Detail
                     </button>
                   </Link>
                 </div>
               </div>
             </div>
-
-
           </div>
       </section>
       <Footer />

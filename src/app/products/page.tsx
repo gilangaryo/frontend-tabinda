@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-export default function LandingPage() {
+export default function ProductPage() {
   return (
     
     <div className="text-2xl text-primary">
