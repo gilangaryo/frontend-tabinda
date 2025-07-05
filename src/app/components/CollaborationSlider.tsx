@@ -1,14 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
 export default function CollaborationSlider() {
-    const [currentSlide, setCurrentSlide] = useState(0)
 
     const slides = [
         {
@@ -53,7 +51,6 @@ export default function CollaborationSlider() {
                 autoplay={{ delay: 7000 }}
                 loop
                 className="!pb-12"
-                onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
                 spaceBetween={30}
                 slidesPerView={1.2}
                 breakpoints={{
