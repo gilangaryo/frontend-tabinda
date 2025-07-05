@@ -50,7 +50,8 @@ export default function CarouselImage() {
     return () => {
       clearTimeout(timeout)
     }
-  }, [currentSlide])
+  }, [currentSlide, slides.length])
+
 
 
   const [dragging, setDragging] = useState(false)
