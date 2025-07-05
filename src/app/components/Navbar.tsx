@@ -25,7 +25,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`w-full ${bgColor} ${textColor} z-50 relative`}>
+    <nav className={`w-full ${bgColor} ${textColor} z-50 relative `}>
       {!isTransparentNavbar && (
         <div className="bg-[#014228] text-white text-sm py-1 text-center">
           Save 20%. Use code: <span className="italic">Tabinda</span>
@@ -42,7 +42,7 @@ export default function Navbar() {
         </button>
         <div className="w-8 md:hidden" />
 
-        <div className="hidden md:grid grid-cols-5 gap-6 text-lg font-light text-center w-full px-6 mx-auto items-center">
+        <div className="hidden md:grid grid-cols-5 gap-6 text-xl font-light text-center w-full px-6 mx-auto items-center">
           <Link href="/products" className={getLinkClass('/products')}>Products</Link>
           <Link href="/article" className={getLinkClass('/article')}>Article</Link>
           <Link href="/" className="flex justify-center">

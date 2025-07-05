@@ -11,10 +11,13 @@ export default function Footer() {
     ? 'bg-white'
     : "bg-[url('/bg-footer.png')] bg-cover bg-center text-white";
 
-  return (
-    <footer className={`${footerClass} py-10 text-left text-sm px-8`}>
-      <div className="grid grid-cols-3 lg:grid-cols-4 md:grid-cols-3">
+  const iconVariant = isTransparentFooter ? '' : '-white';
 
+  return (
+    <footer className={`${footerClass} py-6 text-center sm:text-left px-4 text-black`}>
+      <div className="grid grid-cols-3 lg:grid-cols-4 md:grid-cols-3 ">
+
+        {/* Logo */}
         <div className='col-span-3 lg:col-span-4 justify-center'>
           <div className="flex justify-center md:justify-start mb-6">
             <Image
@@ -27,51 +30,92 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className='col-span-3 md:col-span-3 lg:col-span-1 items-center text-center md:text-left mb-4'>
+        {/* Section 1 */}
+        <div className='col-span-3 md:col-span-3 lg:col-span-1 items-center text-center md:text-left mb-6 md:text-md text-lg'>
           <h3 className="mb-2 italic">Your Hijab Journey</h3>
-          <p>Tabinda is here to elevate the value of simplicity in dressing without sacrificing aesthetics.</p>
+          <p className="md:text-md text-sm">Tabinda is here to elevate the value of simplicity in dressing without sacrificing aesthetics.</p>
         </div>
 
-        <div className='col-span-1 items-center text-center md:text-left'>
-          <p className="mb-2 font-semibold">Discover</p>
-          <ul className='text-xs'>
-            <li><Link href="/article">Article</Link></li>
-            <li><Link href="/collaboration">Collaboration</Link></li>
-          </ul>
-        </div>
 
-        <div className='col-span-1 items-center text-center md:text-left'>
-          <p className="mb-2 font-semibold">Navigation</p>
-          <ul className='text-xs'>
+
+        {/* Section 2 */}
+        <div className='col-span-1 items-center text-center md:text-left md:text-lg text-[12px]'>
+          <h3 className="mb-2 italic">Navigation</h3>
+          <ul className=''>
             <li><Link href="/products">Product</Link></li>
             <li><Link href="/about">About</Link></li>
           </ul>
         </div>
 
-        <div className='col-span-1 items-center text-center md:text-left'>
-          <p className="mb-2 font-semibold">Contact</p>
-          <ul className='text-xs'>
+        {/* Section 3 */}
+        <div className='col-span-1 items-center text-center md:text-left md:text-lg text-[12px] '>
+          <h3 className="mb-2 italic">Discover</h3>
+          <ul className=''>
+            <li><Link href="/article">Article</Link></li>
+            <li><Link href="/collaboration">Collaboration</Link></li>
+          </ul>
+        </div>
+
+        {/* Section 4 */}
+        <div className='col-span-1 items-center text-center md:text-left md:text-lg text-[12px]'>
+          <h3 className="mb-2 italic">Contact</h3>
+          <ul className=''>
             <li><Link href="/contact">Tabinda@gmail.com</Link></li>
             <li><Link href="/faq">+62 0855-250-99</Link></li>
           </ul>
         </div>
 
-        <div className="col-span-2 lg:col-span-3 items-center text-center md:text-left mt-6">
+
+
+      </div>
+      <div className="w-full flex flex-col md:flex-row md:justify-between items-center text-center md:text-left gap-3 mt-6">
+        {/* Copyright - atas di mobile */}
+        <div className="text-[11px] md:text-xs">
           <p>Copyright © 2025 Tabinda</p>
         </div>
 
-        <div className="col-span-1 lg:col-span-1 flex justify-center md:justify-end items-center gap-4 mt-6">
+        {/* Social Media Icons - bawah di mobile */}
+        <div className="flex gap-4 justify-center md:justify-end items-center ">
+          {/* Instagram */}
           <Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-            <Image src="/social-icons/instagram.png" alt="Instagram" width={24} height={24} />
+            <div className="relative w-4 h-4 md:w-6 md:h-6">
+              <Image
+                src={`/social-icons/instagram${iconVariant}.png`}
+                alt="Instagram"
+                fill
+                className="object-contain"
+              />
+            </div>
           </Link>
+
+          {/* Tokopedia */}
           <Link href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-            <Image src="/social-icons/facebook.png" alt="Facebook" width={24} height={24} />
+            <div className="relative w-20 h-4 md:w-20 md:h-6">
+              <Image
+                src={`/social-icons/tokopedia${iconVariant}.png`}
+                alt="Tokopedia"
+                fill
+                className="object-contain"
+              />
+            </div>
           </Link>
+
+          {/* Shopee */}
           <Link href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-            <Image src="/social-icons/linkedin.png" alt="Twitter" width={24} height={24} />
+            <div className="relative w-15 h-5 md:w-20 md:h-6">
+              <Image
+                src={`/social-icons/shopee${iconVariant}.png`}
+                alt="Shopee"
+                fill
+                className="object-contain"
+              />
+            </div>
           </Link>
         </div>
       </div>
+
+
+
     </footer>
   );
 }

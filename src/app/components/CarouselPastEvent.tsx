@@ -155,9 +155,8 @@ export default function CarouselImage() {
           <div
             key={idx}
             onClick={() => setCurrentSlide(idx)}
-            className={`h-1 rounded-full cursor-pointer transition-all duration-300 ${
-              currentSlide === idx ? 'bg-primary w-8' : 'bg-gray-300 w-4'
-            }`}
+            className={`h-1 rounded-full cursor-pointer transition-all duration-300 ${currentSlide === idx ? 'bg-primary w-8' : 'bg-gray-300 w-4'
+              }`}
           />
         ))}
       </div>

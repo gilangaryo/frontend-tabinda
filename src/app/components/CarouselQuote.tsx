@@ -46,7 +46,7 @@ export default function QuoteCarousel() {
           {quotes.map((item, i) => (
             <SwiperSlide key={i}>
               <div className="px-4">
-                <p className="font-[var(--font-heading)] text-lg md:text-xl text-gray-800 mb-2">{item.quote}</p>
+                <h2 className="text-lg md:text-xl text-gray-800 mb-2">{item.quote}</h2>
                 <p className="text-sm md:text-base text-gray-600 mb-1 font-[var(--font-avenir)]">{item.sub}</p>
                 <p className="text-xs text-gray-500 italic font-[var(--font-avenir)]">{item.source}</p>
               </div>
