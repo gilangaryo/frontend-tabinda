@@ -1,5 +1,3 @@
-// 'use client';
-
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Navbar from '../../components/Navbar';
@@ -18,21 +16,22 @@ const products = [
     },
 ];
 
-export default async function ProductDetail({ params }: { params: { slug: string } }) {
-    const { slug } = params;
+export default async function ProductDetail({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}) {
+    const { slug } = await params;
     const product = products.find((p) => p.slug === slug);
     if (!product) return notFound();
 
     return (
-        <div className=" text-primary">
+        <div className="text-primary">
             <Navbar />
 
             {/* Breadcrumb */}
             <div className="max-w-full mx-auto px-10 py-2 text-2xl text-primary">
-                <Link href="/products" className="hover:underline">
-                    Collection
-                </Link>{' '}
-                / Mukena
+                <Link href="/products" className="hover:underline">Collection</Link> / Mukena
             </div>
 
             {/* Detail Section */}
@@ -48,7 +47,7 @@ export default async function ProductDetail({ params }: { params: { slug: string
                 />
 
                 {/* Informasi Produk */}
-                <div className="flex flex-col ">
+                <div className="flex flex-col">
                     <h1 className="text-5xl tracking-wider py-4">{product.name}</h1>
                     <h4 className="text-2xl tracking-wider leading-loose text-gray-500 mb-6 whitespace-pre-line">{product.description}</h4>
                     <p className="text-4xl font-semibold my-4">{product.price}</p>
@@ -76,10 +75,8 @@ export default async function ProductDetail({ params }: { params: { slug: string
             {/* You May Also Like */}
             <section className="max-w-6xl mx-auto px-4 pb-16">
                 <div className="flex justify-between items-center mb-6">
-                    <h3 className="text-xl">Your May Also Like</h3>
-                    <Link href="/products" className="text-sm underline">
-                        View Collection
-                    </Link>
+                    <h3 className="text-xl">You May Also Like</h3>
+                    <Link href="/products" className="text-sm underline">View Collection</Link>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
