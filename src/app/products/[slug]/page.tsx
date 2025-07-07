@@ -18,8 +18,8 @@ const products = [
     },
 ];
 
-export default async function ProductDetail(props: { params: { slug: string } }) {
-    const { slug } = await props.params;
+export default async function ProductDetail({ params }: { params: { slug: string } }) {
+    const { slug } = params;
     const product = products.find((p) => p.slug === slug);
     if (!product) return notFound();
 
