@@ -69,7 +69,7 @@ export default function LandingPage() {
       <section className="py-10 text-center px-4 max-w-full mx-auto text-primary">
         <h2 className="text-6xl mb-6 ">Your Hijrah Journey</h2>
         <div className="aspect-video w-full max-w-4xl mx-auto mb-6 rounded-lg overflow-hidden">
-          <VideoPlayer src="/video/tabinda-campaign.mp4" />
+          <VideoPlayer src="https://res.cloudinary.com/dla5fna8n/video/upload/v1751886783/tabinda-campaign-fix_eilzds.mp4" />
 
         </div>
 

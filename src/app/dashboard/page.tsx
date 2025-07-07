@@ -11,7 +11,7 @@ export default function DashboardHome() {
       <p className="text-sm text-gray-500 mb-6">Start your daily by checking today’s tasks and updates.</p>
 
       {/* Stats */}
-     <DashboardStats />
+      <DashboardStats />
 
       {/* Last 30 days */}
       <div className="mb-8">
@@ -55,7 +55,7 @@ export default function DashboardHome() {
                 <p className="text-sm text-gray-600 mb-2">Tabinda hadir untuk mengangkat nilai kesederhanaan dalam berpakaian tanpa mengorbankan estetika. Kami percaya bahwa tampil tertutup bisa tetap anggun, elegan, dan sesuai dengan gaya masa kini.</p>
                 <p className="text-xs text-gray-500 italic">Frenkie Sulivan
                   <span className="not-italic">
-                  • 20 Sept 2025
+                    • 20 Sept 2025
                   </span>
                 </p>
               </div>
