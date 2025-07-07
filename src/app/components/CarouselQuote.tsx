@@ -28,17 +28,17 @@ export default function QuoteCarousel() {
 
   return (
     <>
-      <div className="grid grid-cols-3 items-center text-sm text-[#014228]">
+      <div className="grid grid-cols-3 items-center text-sm text-primary">
         <div className="text-left italic">Tabinda</div>
         <div className="text-center">{currentSlide + 1}</div>
-        <div className="text-right italic">Your Hijrah Journey</div>
+        <div className="text-right italic ">Your Hijrah Journey</div>
       </div>
 
       <div className="max-w-full mx-auto text-center">
         <Swiper
           modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 8000 }}
+          autoplay={{ delay: 4000 }}
           loop
           className="!pb-10"
           onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
@@ -46,9 +46,9 @@ export default function QuoteCarousel() {
           {quotes.map((item, i) => (
             <SwiperSlide key={i}>
               <div className="px-4">
-                <h2 className="text-lg md:text-xl text-gray-800 mb-2">{item.quote}</h2>
-                <p className="text-sm md:text-base text-gray-600 mb-1 font-[var(--font-avenir)]">{item.sub}</p>
-                <p className="text-xs text-gray-500 italic font-[var(--font-avenir)]">{item.source}</p>
+                <h2 className="text-lg md:text-xl text-primary mb-2">{item.quote}</h2>
+                <p className="text-sm md:text-base text-primary mb-1 font-[var(--font-avenir)]">{item.sub}</p>
+                <p className="text-xs text-primary italic font-[var(--font-avenir)]">{item.source}</p>
               </div>
             </SwiperSlide>
           ))}

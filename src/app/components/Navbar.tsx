@@ -15,7 +15,7 @@ export default function Navbar() {
   const textColor = isTransparentNavbar ? 'text-white' : 'text-[#014228]';
   const logoSrc = isTransparentNavbar ? '/logo-tabinda.png' : '/logo-tabinda-gold.png';
   const hoverUnderline = isTransparentNavbar
-    ? 'hover:underline'
+    ? 'hover:underline underline-offset-6'
     : 'hover:underline decoration-[#014228]';
 
   const getLinkClass = (href: string) => {
@@ -25,24 +25,32 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`w-full ${bgColor} ${textColor} z-50 relative `}>
+    <nav className={`w-full ${bgColor} ${textColor} z-50 relative tracking-wider`}>
       {!isTransparentNavbar && (
         <div className="bg-[#014228] text-white text-sm py-1 text-center">
           Save 20%. Use code: <span className="italic">Tabinda</span>
         </div>
       )}
 
-      <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+      <div className="flex justify-between items-center py-4 max-w-full mx-auto">
+
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-3xl md:hidden"
+          className="text-3xl md:hidden px-6"
           aria-label="Toggle menu"
         >
-          <Image src="/hamburger-icon.png" alt="Menu" width={40} height={40} />
+          <Image
+            src={!isTransparentNavbar ? '/hamburger-icon-green.png' : '/hamburger-icon.png'}
+            alt="Menu"
+            width={60}
+            height={60}
+          />
+
         </button>
+
         <div className="w-8 md:hidden" />
 
-        <div className="hidden md:grid grid-cols-5 gap-6 text-xl font-light text-center w-full px-6 mx-auto items-center">
+        <div className="hidden md:grid grid-cols-5 gap-6 text-xl font-light text-center w-full mx-auto items-center">
           <Link href="/products" className={getLinkClass('/products')}>Products</Link>
           <Link href="/article" className={getLinkClass('/article')}>Article</Link>
           <Link href="/" className="flex justify-center">
@@ -55,7 +63,7 @@ export default function Navbar() {
 
       {isOpen && (
         <div
-          className={`md:hidden flex flex-col px-6 py-4 space-y-4 text-lg font-light ${bgColor} ${textColor}`}
+          className={`md:hidden flex flex-col px-6 pb-4 space-y-2 text-lg font-light ${bgColor} ${textColor}`}
         >
           <Link href="/products" onClick={() => setIsOpen(false)} className={getLinkClass('/products')}>Products</Link>
           <Link href="/article" onClick={() => setIsOpen(false)} className={getLinkClass('/article')}>Article</Link>

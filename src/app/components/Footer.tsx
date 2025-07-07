@@ -14,7 +14,7 @@ export default function Footer() {
   const iconVariant = isTransparentFooter ? '' : '-white';
 
   return (
-    <footer className={`${footerClass} py-6 text-center sm:text-left px-4 text-black`}>
+    <footer className={`${footerClass} py-6 text-center sm:text-left px-8 text-black`}>
       <div className="grid grid-cols-3 lg:grid-cols-4 md:grid-cols-3 ">
 
         {/* Logo */}
@@ -38,14 +38,7 @@ export default function Footer() {
 
 
 
-        {/* Section 2 */}
-        <div className='col-span-1 items-center text-center md:text-left md:text-lg text-[12px]'>
-          <h3 className="mb-2 italic">Navigation</h3>
-          <ul className=''>
-            <li><Link href="/products">Product</Link></li>
-            <li><Link href="/about">About</Link></li>
-          </ul>
-        </div>
+
 
         {/* Section 3 */}
         <div className='col-span-1 items-center text-center md:text-left md:text-lg text-[12px] '>
@@ -55,7 +48,14 @@ export default function Footer() {
             <li><Link href="/collaboration">Collaboration</Link></li>
           </ul>
         </div>
-
+        {/* Section 2 */}
+        <div className='col-span-1 items-center text-center md:text-left md:text-lg text-[12px]'>
+          <h3 className="mb-2 italic">Navigation</h3>
+          <ul className=''>
+            <li><Link href="/products">Product</Link></li>
+            <li><Link href="/about">About</Link></li>
+          </ul>
+        </div>
         {/* Section 4 */}
         <div className='col-span-1 items-center text-center md:text-left md:text-lg text-[12px]'>
           <h3 className="mb-2 italic">Contact</h3>
@@ -64,8 +64,6 @@ export default function Footer() {
             <li><Link href="/faq">+62 0855-250-99</Link></li>
           </ul>
         </div>
-
-
 
       </div>
       <div className="w-full flex flex-col md:flex-row md:justify-between items-center text-center md:text-left gap-3 mt-6">
@@ -77,7 +75,7 @@ export default function Footer() {
         {/* Social Media Icons - bawah di mobile */}
         <div className="flex gap-4 justify-center md:justify-end items-center ">
           {/* Instagram */}
-          <Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.instagram.com/tabinda_official_id/" target="_blank" rel="noopener noreferrer">
             <div className="relative w-4 h-4 md:w-6 md:h-6">
               <Image
                 src={`/social-icons/instagram${iconVariant}.png`}
@@ -89,7 +87,7 @@ export default function Footer() {
           </Link>
 
           {/* Tokopedia */}
-          <Link href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.tokopedia.com/tabindaofficial" target="_blank" rel="noopener noreferrer">
             <div className="relative w-20 h-4 md:w-20 md:h-6">
               <Image
                 src={`/social-icons/tokopedia${iconVariant}.png`}
@@ -101,7 +99,7 @@ export default function Footer() {
           </Link>
 
           {/* Shopee */}
-          <Link href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+          <Link href="https://shopee.co.id/tabindaofficial" target="_blank" rel="noopener noreferrer">
             <div className="relative w-15 h-5 md:w-20 md:h-6">
               <Image
                 src={`/social-icons/shopee${iconVariant}.png`}

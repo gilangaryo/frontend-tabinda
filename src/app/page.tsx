@@ -9,31 +9,34 @@ import QuoteCarousel from './components/CarouselQuote';
 import Footer from './components/Footer';
 import Mission from './components/Mission';
 import Explore from './components/Explore';
-
+import { VideoPlayer } from './components/VideoPlayer';
 export default function LandingPage() {
   return (
 
     <div className="text-2xl text-primary">
 
       {/* Hero Section */}
-      <section className="relative h-screen bg-cover bg-center">
+      <section className="relative h-screen ">
         {/* Navbar */}
         <Navbar />
         <Image
-          src="/hero-section.jpg"
+          src="https://res.cloudinary.com/dla5fna8n/image/upload/v1751886997/hero-section3_pvyjam.jpg"
           alt="Hero background"
-          layout="fill"
-          objectFit="cover"
+          fill
           priority
-          className="z-0"
+          className="object-cover object-center -z-10"
         />
-        <div className="relative z-10 -top-30 flex flex-col items-center justify-center h-full text-white  px-4">
+
+        {/* Overlay hitam transparan */}
+        <div className="absolute inset-0 bg-black/40 z-0" />
+
+        <div className="relative z-10 -top-30 flex flex-col items-center justify-center h-full text-white  tracking-wider px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 mb-8 text-center items-center">
             <div className=" text-center md:text-left italic">
               <h2>Abaya</h2>
             </div>
             <div className="col-span-2 text-center md:text-center mx-4">
-              <h1 className=" text-4xl md:text-5xl mb-4 mt-4  ">
+              <h1 className=" text-4xl md:text-5xl mb-4 mt-4 ">
                 Unveiling the Modest Muslim
               </h1>
             </div>
@@ -63,9 +66,13 @@ export default function LandingPage() {
       </section>
 
       {/* Hijrah Journey */}
-      <section className="py-20 text-center px-4 max-w-full mx-auto text-primary">
-        <h2 className="text-4xl mb-6 ">Your Hijrah Journey</h2>
-        <Image src="/hero-section.jpg" alt="Journey" width={800} height={400} className="rounded-lg mx-auto mb-6" />
+      <section className="py-10 text-center px-4 max-w-full mx-auto text-primary">
+        <h2 className="text-6xl mb-6 ">Your Hijrah Journey</h2>
+        <div className="aspect-video w-full max-w-4xl mx-auto mb-6 rounded-lg overflow-hidden">
+          <VideoPlayer src="/video/tabinda-campaign.mp4" />
+
+        </div>
+
 
         <h1 className="text-center leading-10 mx-auto mb-10 max-w-5xl">
           Tabinda hadir menemani hijrah muslimah dengan busana anggun yang bermakna. Lebih dari sekadar pakaian, setiap karya membawa semangat kepedulian—mulai dari pemberdayaan perempuan lokal hingga komitmen tanpa plastik. Kami ingin menjadi teman dalam perjalanan hidup yang indah, penuh arti, dan keberkahan.
@@ -75,20 +82,20 @@ export default function LandingPage() {
       </section>
 
       {/* Collaboration */}
-      <section className=" py-16 px-4">
-        <h1 className="text-4xl text-center text-primary mb-10">
+      <section className=" py-10 px-10">
+        <h1 className="text-6xl text-center text-primary mb-10">
           Past-Event Collaboration
         </h1>
-        <div className="max-w-full md:max-w-3xl mx-auto">
+        <div className="max-w-full mx-auto">
           <CarouselPastEvent />
         </div>
       </section>
 
 
       {/* See What's New */}
-      <section id="products" className="py-20 px-4 justify-center">
-        <div className="flex justify-between items-center mb-10">
-          <h1 className="text-4xl text-left max-w-full mx-7">See Whats New</h1>
+      <section id="products" className="py-10 px-4 justify-center">
+        <div className="flex justify-between items-center mb-4">
+          <h1 className="text-6xl text-left max-w-full mx-7">See Whats New</h1>
           <Link href="/products" >
             <h1 className="text-xl text-right max-w-full mx-7 italic hover:underline underline-offset-4 decoration-[0.1rem] ">
               View Collection
@@ -103,7 +110,13 @@ export default function LandingPage() {
               key={i}
             >
               <div key={i} className="text-left">
-                <Image src={`/products/product${i}.png`} alt={`Product ${i}`} width={420} height={1440} />
+                <Image
+                  src={`/products/product${i}.png`}
+                  alt={`Product ${i}`}
+                  width={420}
+                  height={1440}
+                  loading="lazy"
+                />
                 <h1 className="mt-2 text-sm">SERI MUKENA TRAVEL</h1>
                 <p className="text-xs text-gray-600">Aziza Mukena</p>
               </div>
@@ -119,7 +132,7 @@ export default function LandingPage() {
 
       {/* Transformative Client */}
       <section className="py-20 px-4 max-w-3xl mx-auto">
-        <h1 className="text-4xl text-center mb-10">Transformative Client Experiences</h1>
+        <h1 className="text-5xl text-center mb-10 tracking-wider">Transformative Client Experiences</h1>
         <CarouselClient />
 
       </section>
@@ -128,6 +141,8 @@ export default function LandingPage() {
 
       <Explore />
       <Footer />
+
+
     </div>
   );
 }

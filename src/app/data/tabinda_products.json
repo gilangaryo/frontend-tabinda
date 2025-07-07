@@ -1,0 +1,273 @@
+[
+    {
+        "product_name": "NAYANIKA – Tweed Abu",
+        "category": "Abaya",
+        "price": 485000,
+        "available_variants": {
+            "motif": [
+                "Tweed Abu2",
+                "Bunga Silver",
+                "Bunga Kecil",
+                "Chiffon Dot"
+            ],
+            "size": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ]
+        },
+        "stock_info": {
+            "variant": "Tweed Abu2",
+            "size": "S",
+            "stock": 1
+        },
+        "minimum_order": 1,
+        "condition": "Baru",
+        "description": "Rayakan Lebaran dengan keanggunan abaya Nayanika, desain elegan yang memadukan kesederhanaan dan pesona abadi. Dibuat dari material super nyaman dengan furing voile yang adem.",
+        "details": {
+            "warna": "Hitam pekat klasik yang elegan",
+            "siluet": "A-line yang jatuh indah",
+            "detail": "Payet hitam handmade di bagian dada",
+            "motif": "Garis lurus di tengah dan punggung dengan aksen pemanis",
+            "tambahan": "Kombinasi motif & renda Paris di ujung pergelangan"
+        },
+        "size_chart": {
+            "S": {
+                "LD": 96,
+                "PL": 56,
+                "PB": 140
+            },
+            "M": {
+                "LD": 100,
+                "PL": 58,
+                "PB": 140
+            },
+            "L": {
+                "LD": 106,
+                "PL": 58,
+                "PB": 140
+            },
+            "XL": {
+                "LD": 120,
+                "PL": 60,
+                "PB": 140
+            }
+        }
+    },
+    {
+        "product_name": "GHALIYA",
+        "category": "Perfume",
+        "price": 109999,
+        "available_variants": {},
+        "stock_info": {
+            "stock": 20
+        },
+        "minimum_order": 1,
+        "condition": "Baru",
+        "description": "Ghalyia Perfume berbasis minyak yang tahan sampai 4 jam. Perpaduan buah Tin, lemon, dan daun kemangi. Dengan aplikator roll-on yang praktis, siap menemani aktivitas harian.",
+        "details": {
+            "ukuran": "10ml",
+            "packaging": "Kotak putih elegan + pouch velvet Mulberry",
+            "aksesoris": "Tali tassel warna peach-pink"
+        }
+    },
+    {
+        "product_name": "SweetTreat - Pink Lace",
+        "category": "Scrunchie",
+        "price": 25000,
+        "available_variants": {
+            "warna": [
+                "Pink Lace",
+                "Soft Blush",
+                "Peach Pearl",
+                "Mulberry",
+                "Sage Green"
+            ]
+        },
+        "stock_info": {
+            "variant": "Pink Lace",
+            "stock": 10
+        },
+        "minimum_order": 1,
+        "condition": "Baru",
+        "description": "Scrunchie satin-sutera anti licin untuk volume dan kenyamanan sanggul.",
+        "details": {
+            "ukuran": "Diameter ± 18 cm",
+            "warna": [
+                "Mulberry",
+                "Pink Lace",
+                "Sage Green",
+                "Soft Blush",
+                "Peach Pearl"
+            ],
+            "bahan": "Polyester berkualitas tinggi dengan karet elastis"
+        }
+    },
+    {
+        "product_name": "Madina Pashmina",
+        "category": "Pashmina",
+        "price": 99999,
+        "available_variants": {
+            "warna": [
+                "Onyx",
+                "Dove",
+                "Clay",
+                "Bluebell",
+                "Burgundy",
+                "Stormcloud",
+                "Deepssea",
+                "Tearose",
+                "Dune"
+            ]
+        },
+        "stock_info": {
+            "variant": "Onyx",
+            "stock": 4
+        },
+        "minimum_order": 1,
+        "condition": "Baru",
+        "description": "Pashmina berbahan chiffon sutera halus, ringan dan cocok untuk keseharian atau acara spesial.",
+        "details": {
+            "ukuran": "L: 75cm x P: 180cm"
+        }
+    },
+    {
+        "product_name": "Maheera Hijab",
+        "category": "Hijab",
+        "price": 119999,
+        "available_variants": {
+            "warna": [
+                "Riverside",
+                "Sweetpea",
+                "Lotusbloom",
+                "Gojiberry",
+                "Pinewood",
+                "Stardew",
+                "Sandcastle"
+            ],
+            "motif": [
+                "bercorak"
+            ]
+        },
+        "stock_info": {
+            "variant": "Riverside, bercorak",
+            "stock": 5
+        },
+        "minimum_order": 1,
+        "condition": "Baru",
+        "description": "Hijab Ultrafine Voile dengan motif artistik dan tampilan eco-friendly.",
+        "details": {
+            "ukuran": {
+                "Sweetpea, Riverside, Lotusbloom, Gojiberry, Sandcastle": "P 115 cm x L 115 cm",
+                "Stardew dan Pinewood": "P 120 cm x L 120 cm"
+            }
+        }
+    },
+    {
+        "product_name": "Mahpara Hijab",
+        "category": "Hijab",
+        "price": 119999,
+        "available_variants": {
+            "warna": [
+                "AQUAMARINE",
+                "NOIR",
+                "GUAVA",
+                "JADE",
+                "COCONUT MILK"
+            ]
+        },
+        "stock_info": {
+            "variant": "AQUAMARINE",
+            "stock": 4
+        },
+        "minimum_order": 1,
+        "condition": "Baru",
+        "description": "Hijab MONOGRAM dengan dua bahan: Cashmere (Noir dan Aquamarine), Ultrafine Voile (sisanya).",
+        "details": {
+            "ukuran": "120 cm x 120 cm"
+        }
+    },
+    {
+        "product_name": "BOW BUBBLE",
+        "category": "Mukena",
+        "price": 499999,
+        "available_variants": {
+            "warna": [
+                "TEAL X PALE",
+                "SAGE X PALE",
+                "Hitam"
+            ]
+        },
+        "stock_info": {
+            "variant": "TEAL X PALE",
+            "stock": 6
+        },
+        "minimum_order": 1,
+        "condition": "Baru",
+        "description": "Mukena warna cerah dengan pouch multifungsi, tampil modis dan stylish untuk beribadah.",
+        "details": {
+            "tinggi_mukena_atas_depan": "110 cm",
+            "tinggi_mukena_atas_belakang": "133 cm",
+            "panjang_rok": "114 cm",
+            "lebar_dada": "176 cm",
+            "panjang_lengan": "51 cm"
+        }
+    },
+    {
+        "product_name": "Candy Cloud Black",
+        "category": "Mukena",
+        "price": 395000,
+        "available_variants": {
+            "warna": [
+                "Candy Cloud Black",
+                "Candy Cloud Salt Blue",
+                "Candy Cloud Mulberry",
+                "Candy Cloud Glamour Gold"
+            ],
+            "size": [
+                "All Size"
+            ]
+        },
+        "stock_info": {
+            "variant": "Candy Cloud Black",
+            "stock": 19
+        },
+        "minimum_order": 1,
+        "condition": "Baru",
+        "description": "Mukena dua potong desain minimalis, dilengkapi pouch dan lengan dengan Jersey Spandex.",
+        "details": {
+            "tinggi_mukena": "200 cm",
+            "lebar_dada": "176 cm",
+            "panjang_lengan": "51 cm"
+        }
+    },
+    {
+        "product_name": "Mukena Tabinda | GIRLIE | AZIZA COLLECTION - Grey Pearl",
+        "category": "Mukena",
+        "price": 485000,
+        "available_variants": {
+            "warna": [
+                "Grey Pearl",
+                "Emerald Green",
+                "Misty Mauve",
+                "Pink Lace",
+                "Hitam"
+            ]
+        },
+        "stock_info": {
+            "variant": "Grey Pearl",
+            "stock": 3
+        },
+        "minimum_order": 1,
+        "condition": "Baru",
+        "description": "Mukena dengan detail renda halus, pouch Sholat, dan lengan Jersey Spandex.",
+        "details": {
+            "tinggi_mukena_atas_depan": "110",
+            "tinggi_mukena_atas_belakang": "133",
+            "panjang_rok": "114",
+            "lebar_dada": "176",
+            "panjang_lengan": "51"
+        }
+    }
+]

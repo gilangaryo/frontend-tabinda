@@ -46,9 +46,8 @@ export default function Article() {
                         src="/article-page/hero-article.png"
                         alt="Hero background"
                         layout="fill"
-                        objectFit="cover"
                         priority
-                        className="z-0"
+                        className="z-0 object-cover"
                     />
                 </div>
             </section>
@@ -76,7 +75,13 @@ export default function Article() {
                     {articles.map((article, index) => (
                         <Link key={index} href={`/article/${article.slug}`} className="flex flex-col hover:opacity-90">
                             <div className="relative w-full aspect-[1/1] mb-4 overflow-hidden ">
-                                <Image src={article.image} alt={article.title} fill className="object-cover" />
+                                <Image
+                                    src={article.image}
+                                    alt={article.title}
+                                    fill
+                                    loading="lazy"
+                                    className="object-cover"
+                                />
                             </div>
                             <p className="text-xs text-green-900 italic mb-1">
                                 {article.category} / {article.date}

@@ -7,7 +7,7 @@ export default function PageManage() {
   const pages = [
     {
       title: 'Collaboration',
-      image: '/hero-section.jpg',
+      image: '/hero-section3.jpg',
       description:
         'Tabinda berkolaborasi dengan banyak individu dan organisasi untuk memperluas pengaruh brand melalui nilai-nilai modesty dan estetika modern.',
       date: '14 Feb, 2025',
@@ -15,7 +15,7 @@ export default function PageManage() {
     },
     {
       title: 'Product',
-      image: '/hero-section.jpg',
+      image: '/hero-section3.jpg',
       description:
         'Menampilkan koleksi terbaru produk hijab Tabinda dengan desain eksklusif dan tampilan yang elegan.',
       date: '14 Feb, 2025',

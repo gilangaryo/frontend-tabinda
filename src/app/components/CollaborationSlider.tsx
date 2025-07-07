@@ -73,7 +73,7 @@ export default function CollaborationSlider() {
                             </div>
 
                             {/* Text */}
-                            <h2 className="text-sm  mb-1">{slide.title}</h2>
+                            <h2 className="text-2xl mb-1">{slide.title}</h2>
                             <p className="text-sm">{slide.date}</p>
                         </div>
                     </SwiperSlide>

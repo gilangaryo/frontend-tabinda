@@ -26,11 +26,20 @@ body {
   font-family: var(--font-body);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
 }
 
-p, span, a, li, button {
+p,
+span,
+a,
+li,
+button {
   font-family: var(--font-body);
 }
 
@@ -48,4 +57,21 @@ p, span, a, li, button {
 .swiper .swiper-pagination-bullet-active {
   background-color: #014228 !important;
   width: 28px;
+}
+
+
+
+.swiper-pagination-bullet {
+  width: 24px !important;
+  height: 4px !important;
+  border-radius: 9999px !important;
+  background-color: #d1d5db !important;
+  opacity: 1 !important;
+  margin: 0 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-primary) !important;
+  width: 28px !important;
 }

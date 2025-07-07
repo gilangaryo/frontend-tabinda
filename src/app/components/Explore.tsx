@@ -1,4 +1,3 @@
-'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,8 +18,8 @@ export default function Explore() {
                 <div className="md:col-span-3 flex flex-col justify-between">
                     <div className="text-center md:text-left">
                         <p className="text-sm mb-2">Your Hijab Journey</p>
-                        <p className="text-3xl font-bold sm:text-5xl lg:text-6xl mb-5">Explore Our Collection of</p>
-                        <p className="text-3xl font-bold sm:text-5xl lg:text-6xl italic">Meaningful Modesty.</p>
+                        <p className="text-3xl sm:text-5xl lg:text-6xl mb-5">Explore Our Collection of</p>
+                        <p className="text-3xl sm:text-5xl lg:text-6xl italic">Meaningful Modesty.</p>
                     </div>
 
                     <div className="mt-8 md:mt-0 max-w-3xl">
