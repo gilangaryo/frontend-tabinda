@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Explore() {
     return (
-        <div className="relative text-white px-4 md:px-12 py-16 overflow-hidden min-h-[500px]">
+        <div className="relative text-white px-4 md:px-12 py-16 overflow-hidden min-h-[600px]">
             <Image
                 src="/explore.png"
                 alt="Explore Background"

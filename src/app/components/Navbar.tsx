@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const isTransparentNavbar = pathname === '/' || pathname.startsWith('/article');
+  const isTransparentNavbar = pathname === '/';
 
   const bgColor = isTransparentNavbar ? 'bg-transparent' : 'bg-white';
   const textColor = isTransparentNavbar ? 'text-white' : 'text-[#014228]';

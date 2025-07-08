@@ -28,32 +28,36 @@ export default function QuoteCarousel() {
 
   return (
     <>
-      <div className="grid grid-cols-3 items-center text-sm text-primary">
-        <div className="text-left italic">Tabinda</div>
-        <div className="text-center">{currentSlide + 1}</div>
-        <div className="text-right italic ">Your Hijrah Journey</div>
-      </div>
+      <section className="mt-10 py-10 px-4 max-w-6xl mx-auto space-y-8">
 
-      <div className="max-w-full mx-auto text-center">
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 4000 }}
-          loop
-          className="!pb-10"
-          onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
-        >
-          {quotes.map((item, i) => (
-            <SwiperSlide key={i}>
-              <div className="px-4">
-                <h2 className="text-lg md:text-xl text-primary mb-2">{item.quote}</h2>
-                <p className="text-sm md:text-base text-primary mb-1 font-[var(--font-avenir)]">{item.sub}</p>
-                <p className="text-xs text-primary italic font-[var(--font-avenir)]">{item.source}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+        <div className="grid grid-cols-3 items-center text-2xl text-primary ">
+          <div className="text-left italic">Tabinda</div>
+          <div className="text-center ">{currentSlide + 1}</div>
+          <div className="text-right italic ">Your Hijrah Journey</div>
+        </div>
+
+        <div className="max-w-full mx-auto text-center ">
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 4000 }}
+            loop
+            className="!pb-10"
+            onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
+          >
+            {quotes.map((item, i) => (
+              <SwiperSlide key={i}>
+                <div className="px-4 ">
+                  <h2 className="text-lg md:text-4xl text-primary mb-5">{item.quote}</h2>
+                  <p className="text-sm md:text-lg text-primary my-2 ">{item.sub}</p>
+                  <p className="text-sm text-primary italic">{item.source}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+
     </>
   );
 }

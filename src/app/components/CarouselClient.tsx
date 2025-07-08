@@ -24,49 +24,72 @@ export default function CarouselClient() {
   }, [])
 
   const data = [
-    'Rima',
-    'Aulia',
-    'Intan',
-    'Gilang',
-    'Aryo',
-    'Pamungkas',
-    'Haikal',
-    'Jamal',
+    {
+      name: 'Rima',
+      message:
+        'Aku suka banget model bagian kepalanya strech dan fleksibel. Tadinya udah order satu akhirnya jadi nambah warna hitam sama peach.',
+    },
+    {
+      name: 'Wiwin',
+      message:
+        'Mamahku suka banget habis selesai dipakai buat sholat ied mukenanya ga dilepas-lepas sampai halal bi halal keliling dan nerima tamu di rumah mukenanya masih tetap dipakai.',
+    },
+    {
+      name: 'Ima',
+      message:
+        'Bahan yang nggak pernah aku temuin di mukena lain. Ringan, adem, Stretchy. Bahannya enteng tapi kelihatan banget eleganya. packaging juga cakep cocok untuk jadi exclusive gift.',
+    },
+    {
+      name: 'Rima',
+      message:
+        'Aku suka banget model bagian kepalanya strech dan fleksibel. Tadinya udah order satu akhirnya jadi nambah warna hitam sama peach.',
+    },
+    {
+      name: 'Wiwin',
+      message:
+        'Mamahku suka banget habis selesai dipakai buat sholat ied mukenanya ga dilepas-lepas sampai halal bi halal keliling dan nerima tamu di rumah mukenanya masih tetap dipakai.',
+    },
+    {
+      name: 'Ima',
+      message:
+        'Bahan yang nggak pernah aku temuin di mukena lain. Ringan, adem, Stretchy. Bahannya enteng tapi kelihatan banget eleganya. packaging juga cakep cocok untuk jadi exclusive gift.',
+    }
+
   ]
 
   return (
-    <div className="relative w-full col-span-full text-[--color-primary]">
+    <section className="py-20 px-4 max-w-6xl mx-auto">
+      <h1 className="text-5xl text-center mb-10 tracking-wider">
+        Transformative Client Experiences
+      </h1>
       <Swiper
         modules={[Pagination, Autoplay]}
         slidesPerView={perView}
         spaceBetween={16}
         autoplay={{ delay: 4000 }}
         pagination={{ clickable: true }}
-        className="!pb-8"
+        className="!pb-12"
       >
-        {data.map((name, idx) => (
+        {data.map((item, idx) => (
           <SwiperSlide key={idx}>
-            <div className="bg-gray-100 shadow rounded-lg mx-auto w-full h-full mb-4">
-              <div className='p-5 '>
+            <div className="bg-gray-100 rounded-lg h-full flex flex-col justify-between min-h-[300px] mx-2">
+              <div className="p-5">
                 <Image
                   src={'/quote.png'}
                   alt={`Quote`}
-                  width={40}
-                  height={40}
-                  className=" mb-4"
+                  width={60}
+                  height={60}
+                  className="mb-4"
                 />
-                <p className="text-sm mb-4">
-                  Produk Tabinda sangat nyaman dan desainnya sesuai syari. Saya merasa lebih percaya diri dalam menjalani hijrah
-                </p>
+                <p className="text-lg tracking-wide mb-4">{item.message}</p>
               </div>
-              <div className='bg-white rounded-bl-lg rounded-tr-2xl w-30 p-4'>
-                <p className="text-sm text-left ">{name}</p>
+              <div className="bg-white rounded-bl-lg rounded-tr-2xl w-30 px-6 py-3">
+                <p className="text-sm text-left">{item.name}</p>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-
-    </div>
+    </section>
   )
 }

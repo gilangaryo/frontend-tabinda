@@ -60,9 +60,9 @@ export default function CollaborationSlider() {
             >
                 {slides.map((slide, i) => (
                     <SwiperSlide key={i}>
-                        <div className="flex flex-col text-center items-center px-2">
+                        <div className="flex flex-col text-center items-center">
                             {/* Gambar 1:1 */}
-                            <div className="relative aspect-square w-full mb-4 rounded overflow-hidden shadow">
+                            <div className="relative aspect-square w-full mb-4 overflow-hidden ">
                                 <Image
                                     src={slide.image}
                                     alt={`Slide ${i + 1}`}
@@ -73,8 +73,8 @@ export default function CollaborationSlider() {
                             </div>
 
                             {/* Text */}
-                            <h2 className="text-2xl mb-1">{slide.title}</h2>
-                            <p className="text-sm">{slide.date}</p>
+                            <h2 className="text-2xl mb-1 ">{slide.title}</h2>
+                            <p className="text-md">{slide.date}</p>
                         </div>
                     </SwiperSlide>
                 ))}

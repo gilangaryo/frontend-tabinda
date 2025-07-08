@@ -51,21 +51,21 @@ export default function About() {
             <section className="px-6 md:px-10 mb-16">
                 <div className="grid md:grid-cols-2 gap-6 items-start">
                     <div>
-                        <h2 className="text-2xl md:text-6xl mb-2">
+                        <h2 className="text-2xl md:text-6xl mb-3">
                             About Collaboration
                         </h2>
-                        <p className="italic text-xl tracking-wider">
+                        <p className="italic text-xl tracking-wider leading-8">
                             Mendorong pertumbuhan ekonomi lokal dan pelestarian <br className="hidden md:block" />
                             keterampilan tradisional melalui kolaborasi komunitas.
                         </p>
                     </div>
 
                     <div>
-                        <h1 className='mt-10 text-xl tracking-widest'>
+                        <h2 className='mt-10 text-xl tracking-wider leading-8'>
                             Melalui kolaborasi ini, Tabinda tidak hanya menghadirkan busana yang memesona,
                             tetapi juga menjadi bagian dari perjalanan hijrah yang lebih luas: sebuah perjalanan
                             menuju kehidupan yang lebih bermakna, berkelanjutan, dan penuh berkah.
-                        </h1>
+                        </h2>
                     </div>
                 </div>
             </section>

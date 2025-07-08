@@ -33,7 +33,7 @@ export default function Footer() {
         {/* Section 1 */}
         <div className='col-span-3 md:col-span-3 lg:col-span-1 items-center text-center md:text-left mb-6 md:text-md text-lg'>
           <h3 className="mb-2 italic">Your Hijab Journey</h3>
-          <p className="md:text-md text-sm">Tabinda is here to elevate the value of simplicity in dressing without sacrificing aesthetics.</p>
+          <p className="md:text-md text-sm md:max-w-70">Tabinda is here to elevate the value of simplicity in dressing without sacrificing aesthetics.</p>
         </div>
 
 
@@ -43,7 +43,7 @@ export default function Footer() {
         {/* Section 3 */}
         <div className='col-span-1 items-center text-center md:text-left md:text-lg text-[12px] '>
           <h3 className="mb-2 italic">Discover</h3>
-          <ul className=''>
+          <ul>
             <li><Link href="/article">Article</Link></li>
             <li><Link href="/collaboration">Collaboration</Link></li>
           </ul>
@@ -51,24 +51,33 @@ export default function Footer() {
         {/* Section 2 */}
         <div className='col-span-1 items-center text-center md:text-left md:text-lg text-[12px]'>
           <h3 className="mb-2 italic">Navigation</h3>
-          <ul className=''>
-            <li><Link href="/products">Product</Link></li>
+          <ul >
+            <li><Link href="/products">Products</Link></li>
             <li><Link href="/about">About</Link></li>
           </ul>
         </div>
         {/* Section 4 */}
         <div className='col-span-1 items-center text-center md:text-left md:text-lg text-[12px]'>
           <h3 className="mb-2 italic">Contact</h3>
-          <ul className=''>
-            <li><Link href="/contact">Tabinda@gmail.com</Link></li>
-            <li><Link href="/faq">+62 0855-250-99</Link></li>
+          <ul >
+            <li>
+              <a href="mailto:Tabinda@gmail.com" className="hover:underline">
+                Tabinda@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+62085525099" className="hover:underline">
+                +62 0855-250-99
+              </a>
+            </li>
           </ul>
+
         </div>
 
       </div>
       <div className="w-full flex flex-col md:flex-row md:justify-between items-center text-center md:text-left gap-3 mt-6">
         {/* Copyright - atas di mobile */}
-        <div className="text-[11px] md:text-xs">
+        <div className="text-[11px] md:text-sm">
           <p>Copyright © 2025 Tabinda</p>
         </div>
 
