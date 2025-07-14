@@ -1,15 +1,16 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import products from '../data/produk_tabinda.json'; // Pastikan file ini .ts atau dalam /app
+import products from '../data/produk_tabinda';
 
 export default function WhatsNew() {
-    // Ambil 4 produk pertama (atau bisa filter by kategori, dsb)
     const featuredProducts = products.slice(0, 4);
 
     return (
-        <section id="products" className="py-10 px-4 justify-center">
-            <div className="flex justify-between items-center mb-8">
-                <h1 className="text-6xl text-left max-w-full mx-7">See What&apos;s New</h1>
+        <section id="products" className="py-10 px-4 justify-center text-primary">
+            <div className="flex justify-between items-center mb-2">
+                <h1 className="text-3xl md:text-5xl text-left max-w-full mx-7">See What&apos;s New</h1>
                 <Link href="/products">
                     <h1 className="text-xl text-right max-w-full mx-7 italic hover:underline underline-offset-4 decoration-[0.1rem]">
                         View Collection
@@ -17,24 +18,40 @@ export default function WhatsNew() {
                 </Link>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-full mx-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 px-6 mx-auto max-w-full justify-items-center">
                 {featuredProducts.map((product, i) => (
                     <Link
                         key={i}
-                        href={`/products/product${i + 1}`}
-                        className="hover:scale-103 transition-transform duration-200"
+                        href={`/products/${product.slug}`}
+                        className="group relative mb-5 w-full"
                     >
-                        <div className="text-left">
+                        <div className="text-left relative">
+                            {/* Gambar Produk */}
                             <Image
-                                src={`/products/${product.image.replace('/', '')}`}
+                                src={`/products/showcase/${product.image.replace('/', '')}`}
                                 alt={product.name}
                                 width={420}
                                 height={600}
+                                className="object-cover mt-2"
                                 loading="lazy"
-                                className="object-cover"
                             />
-                            <h1 className="mt-3 text-2xl tracking-wider">{product.name}</h1>
-                            <p className="mt-2 text-lg text-gray-600">{product.category}</p>
+
+                            {/* Nama, kategori, dan ikon cart */}
+                            <div className="flex justify-between items-center px-2 mt-4">
+                                <div>
+                                    <h1 className="tracking-widest text-xl uppercase">{product.name}</h1>
+                                    <p className="text-sm text-gray-500">{product.category}</p>
+                                </div>
+                                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <Image
+                                        src="/products/cart.png"
+                                        alt="Add to cart"
+                                        width={24}
+                                        height={24}
+                                        className="h-6 w-6"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </Link>
                 ))}

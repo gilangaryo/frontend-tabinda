@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import PageTransition from "./components/PageTransition";
 
 // Heading: Dit Magi
 const ditMagi = localFont({
@@ -12,16 +15,8 @@ const ditMagi = localFont({
 // Body: Raleway
 const raleway = localFont({
   src: [
-    {
-      path: "./fonts/Raleway.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Raleway-Italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
+    { path: "./fonts/Raleway.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/Raleway-Italic.ttf", weight: "400", style: "italic" },
   ],
   variable: "--font-body",
   display: "swap",
@@ -29,10 +24,18 @@ const raleway = localFont({
 
 export const metadata: Metadata = {
   title: "Tabinda Hijab",
-  description: "Unveiling the Modest Muslim — Koleksi hijab dan abaya elegan dengan sentuhan etika dan nilai.",
+  description:
+    "Unveiling the Modest Muslim — Koleksi hijab dan abaya elegan dengan sentuhan etika dan nilai.",
   keywords: [
-    "Hijab", "Abaya", "Busana Muslim", "Tabinda", "Fashion Muslimah",
-    "Modest Fashion", "Syari", "Ethical Fashion", "Hijab Indonesia"
+    "Hijab",
+    "Abaya",
+    "Busana Muslim",
+    "Tabinda",
+    "Fashion Muslimah",
+    "Modest Fashion",
+    "Syari",
+    "Ethical Fashion",
+    "Hijab Indonesia",
   ],
   creator: "Tabinda Team",
   publisher: "Tabinda Hijab",
@@ -40,13 +43,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="id">
       <body className={`${ditMagi.variable} ${raleway.variable} antialiased`}>
-        {children}
+        <Navbar />
+        <PageTransition>
+          {children}
+        </PageTransition>
+        <Footer />
       </body>
     </html>
   );

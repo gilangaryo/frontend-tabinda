@@ -24,21 +24,7 @@ export default function CollaborationSlider() {
             title: 'Event Palembang acara Ustadzah Halimah Alaydrus',
             date: 'May, 2024',
         },
-        {
-            image: '/collaboration/head/3.png',
-            title: 'Event Palembang acara Ustadzah Halimah Alaydrus ',
-            date: 'May, 2024',
-        },
-        {
-            image: '/collaboration/head/3.png',
-            title: 'Event Palembang acara Ustadzah Halimah Alaydrus',
-            date: 'May, 2024',
-        },
-        {
-            image: '/collaboration/head/3.png',
-            title: 'Event Palembang acara Ustadzah Halimah Alaydrus',
-            date: 'May, 2024',
-        },
+
     ]
 
     return (

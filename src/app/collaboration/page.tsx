@@ -1,8 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { Swiper } from 'swiper/react';
 import 'swiper/css';
 import Mission from '../components/Mission';
@@ -11,11 +9,10 @@ import CollaborationSlider from '../components/CollaborationSlider';
 
 export default function About() {
     return (
-        <div className="text-primary ">
-            <Navbar />
+        <div className='text-primary'>
             <section className="px-6 md:px-10">
-                <div className="text-center ">
-                    <h1 className="text-[34px] md:text-[110px] xl:text-[180px] tracking-wide ">
+                <div className="text-center  ">
+                    <h1 className="text-[35px] md:text-[70px] xl:text-[120px] tracking-wide mb-2">
                         Past Event Collaboration
                     </h1>
                 </div>
@@ -72,7 +69,7 @@ export default function About() {
 
 
 
-            <section className="px-6 md:px-10 mb-24">
+            <section className="px-6 md:px-10 mb-10">
                 <Swiper
                     modules={[Pagination]}
                     pagination={{ clickable: true }}
@@ -82,7 +79,6 @@ export default function About() {
 
             <Mission />
             <br />
-            <Footer />
         </div>
     );
 }

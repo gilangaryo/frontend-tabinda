@@ -1,19 +1,16 @@
 'use client';
 
 import Image from 'next/image';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Mission from '../components/Mission';
 import Explore from '../components/Explore';
 export default function About() {
   return (
-    <div className="text-primary font-sans">
-      <Navbar />
-      <section className="px-10">
+    <div className='text-primary'>
+      < section className="px-12 py-8 " >
         <div className="text-center mb-12">
-          <h3 className="text-md tracking-widest my-2">Welcome to Tabinda</h3>
-          <h1 className="text-4xl md:text-8xl tracking-wide">
-            The First Step Toward <span className="italic text-primary">The Bigger Story</span>
+          <h3 className="text-xl tracking-widest my-4">Welcome to Tabinda</h3>
+          <h1 className="text-4xl md:text-7xl tracking-wide">
+            The First Step Toward <span className="italic ">The Bigger Story</span>
           </h1>
         </div>
 
@@ -52,16 +49,15 @@ export default function About() {
             <h3 className="italic text-left text-2xl mt-2 tracking-wider">Making it comfortable to any season</h3>
           </div>
         </div>
-      </section>
+      </section >
+      <section className='px-12 py-4'>
 
-      <section className='px-10 py-4'>
+        <h2 className="text-5xl tracking-wide">About Tabinda</h2>
 
-        <h2 className="text-5xl mb-2 tracking-wide">About Tabinda</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
 
           <div>
-            <h2 className="italic text-3xl mb-4">
+            <h2 className="italic text-xl md:text-2xl ">
               Elegant Modesty, Conscious Choices, Respecting Ethics and Honoring Values to a Better World.
             </h2>
 
@@ -75,11 +71,10 @@ export default function About() {
         </div>
       </section>
 
-
-      <section className='px-10 py-4'>
-        <div className="grid grid-flow-col grid-rows-3 gap-4">
-          <div className="row-span-3 ">
-            <div>
+      <section className='px-12 '>
+        <div className="grid grid-flow-col grid-rows-2 md:grid-rows-3 gap-4">
+          <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-3 ">
+            <div className="mx-auto">
               <Image
                 src="/about/brand.png"
                 alt="Our Brand"
@@ -88,10 +83,10 @@ export default function About() {
                 className="rounded-md"
               />
             </div>
+
           </div>
-          <div className="col-span-2">
-          </div>
-          <div className="col-span-3 row-span-2 flex flex-col justify-end">
+
+          <div className="col-span-4 md:col-span-3 row-span-1 md:row-span-3 flex flex-col justify-start md:justify-end ">
             <div>
               <h1 className="text-5xl mb-2">Our Brand</h1>
               <h3 className="text-base">
@@ -113,7 +108,7 @@ export default function About() {
         />
       </section>
 
-      <section className="px-4 md:px-16 py-16 bg-white text-[#014228]">
+      <section className="px-4 md:px-16 pb-10 bg-white text-primary">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
 
           <div className="col-span-1 flex flex-col justify-between h-full">
@@ -149,9 +144,8 @@ export default function About() {
         <Explore />
       </section>
 
-      <section>
-        <Footer />
-      </section>
-    </div>
+
+
+    </div >
   );
 }

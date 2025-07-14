@@ -1,13 +1,10 @@
 import Link from 'next/link';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 
 export default function NotFound() {
     return (
         <div className="text-primary font-[var(--font-avenir)]">
-            <Navbar />
 
-            <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-6 py-20">
+            <div className=" flex flex-col items-center justify-center text-center px-6 py-20">
                 <p> 404 </p>
                 <h1 className="text-4xl font-bold mb-2">
                     <span>
@@ -30,7 +27,6 @@ export default function NotFound() {
                 </Link>
             </div>
 
-            <Footer />
         </div>
     );
 }

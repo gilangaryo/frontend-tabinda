@@ -30,7 +30,7 @@ export default function QuoteCarousel() {
     <>
       <section className="mt-10 py-10 px-4 max-w-6xl mx-auto space-y-8">
 
-        <div className="grid grid-cols-3 items-center text-2xl text-primary ">
+        <div className="grid grid-cols-3 items-center text-md md:text-2xl text-primary ">
           <div className="text-left italic">Tabinda</div>
           <div className="text-center ">{currentSlide + 1}</div>
           <div className="text-right italic ">Your Hijrah Journey</div>

@@ -3,25 +3,25 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import products from '../data/produk_tabinda';
-
 export default function ProductPage() {
   const categories = ['Sawda Abaya', 'Aziza Mukena', 'Alhawa Collection', 'Hijab Series', 'Pashmina Series'];
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [fade, setFade] = useState(true);
 
   const handleFilter = (category: string) => {
-    setActiveCategory((prev) => (prev === category ? null : category)); // toggle on/off
+    setFade(false);
+    setTimeout(() => {
+      setActiveCategory((prev) => (prev === category ? null : category));
+      setFade(true);
+    }, 200);
   };
 
   const filteredProducts = activeCategory
     ? products.filter((product) => product.category === activeCategory)
     : products;
-
   return (
     <div className="text-2xl text-primary">
-      <Navbar />
 
       <section className="py-16 px-4 text-center text-primary">
         <h2 className="text-5xl mb-8">Your Hijab Journey</h2>
@@ -48,29 +48,50 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <section id="products" className="py-10 justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 max-w-full mx-auto px-6 place-items-center">
+      <section id="products" className="py-10 ">
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 mx-auto max-w-screen-xl justify-items-center
+    transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}
+        >
+
           {filteredProducts.map((product, index) => (
             <Link
               key={index}
-              href={`/products/product${index + 1}`}
-              className="hover:scale-102 transition-transform duration-300 mb-5"
+              href={`/products/${product.slug}`}
+              className={`group relative mb-5 w-full transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'
+                }`}
             >
-              <div className="text-left">
+              <div className="text-left relative pb-4">
+                {/* Gambar Produk */}
                 <Image
-                  src={`/products/${product.image.replace('/', '')}`}
+                  src={`/products/showcase/${product.image.replace('/', '')}`}
                   alt={product.name}
                   width={420}
                   height={600}
                   className="object-cover mt-4"
                   loading="lazy"
                 />
-                <h1 className="mt-2 tracking-widest text-xl uppercase">{product.name}</h1>
-                <p className="mt-1 text-sm text-gray-500">{product.category}</p>
-                {/* <p className="text-sm text-gray-700 mt-1">IDR {product.price.toLocaleString()}</p> */}
+
+                {/* Nama, kategori, dan ikon cart dalam satu baris */}
+                <div className="flex justify-between items-center px-2 mt-4">
+                  <div>
+                    <h1 className="tracking-widest md:text-xl uppercase">{product.name}</h1>
+                    <p className="text-sm text-gray-500">{product.category}</p>
+                  </div>
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Image
+                      src="/products/cart.png"
+                      alt="Add to cart"
+                      width={24}
+                      height={24}
+                      className="h-6 w-6"
+                    />
+                  </div>
+                </div>
               </div>
             </Link>
           ))}
+
         </div>
 
         {filteredProducts.length === 0 && (
@@ -78,7 +99,8 @@ export default function ProductPage() {
         )}
       </section>
 
-      <Footer />
+
+
     </div>
   );
 }

@@ -20,13 +20,15 @@ export default function Footer() {
         {/* Logo */}
         <div className='col-span-3 lg:col-span-4 justify-center'>
           <div className="flex justify-center md:justify-start mb-6">
-            <Image
-              src="/logo-tabinda-gold.png"
-              alt="Tabinda Logo"
-              width={100}
-              height={50}
-              className="mb-4 text-center content-center items-center justify-center"
-            />
+            <Link href="/">
+              <Image
+                src="/logo-tabinda-gold.png"
+                alt="Tabinda Logo"
+                width={100}
+                height={50}
+                className="mb-4 text-center content-center items-center justify-center"
+              />
+            </Link>
           </div>
         </div>
 
@@ -35,10 +37,6 @@ export default function Footer() {
           <h3 className="mb-2 italic">Your Hijab Journey</h3>
           <p className="md:text-md text-sm md:max-w-70">Tabinda is here to elevate the value of simplicity in dressing without sacrificing aesthetics.</p>
         </div>
-
-
-
-
 
         {/* Section 3 */}
         <div className='col-span-1 items-center text-center md:text-left md:text-lg text-[12px] '>

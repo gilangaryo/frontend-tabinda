@@ -2,8 +2,6 @@
 
 // import Image from 'next/image';
 // import Link from 'next/link';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Explore from '../components/Explore';
 import ComingSoon from '../components/ComingSoon';
 
@@ -40,10 +38,8 @@ import ComingSoon from '../components/ComingSoon';
 export default function Article() {
     return (
         <div>
-            <Navbar />
             <ComingSoon />
             <Explore />
-            <Footer />
         </div >
     );
 }

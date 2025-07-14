@@ -10,13 +10,14 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@prisma/client": "^6.11.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.23.0",
     "keen-slider": "^6.8.6",
     "lucide-react": "^0.525.0",
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-intersection-observer": "^9.16.0",
     "swiper": "^11.2.10"
   },
   "devDependencies": {
@@ -28,7 +29,6 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
     "postcss": "^8.5.6",
-    "prisma": "^6.11.1",
     "tailwindcss": "^4.1.10",
     "typescript": "^5"
   }

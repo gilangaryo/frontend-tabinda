@@ -10,29 +10,27 @@ import 'swiper/css/pagination'
 export default function CarouselPastEvent() {
   const slides = [
     {
-      image: '/collaboration/collaboration1.png',
-      date: 'March, 2025',
-      title: 'Event Medan Bershalawat Ustadzah Ayu Nahlul Muna Al Munawwar',
-      linkText: 'See More Event',
-    },
-    {
-      image: '/collaboration/collaboration2.png',
-      date: 'April, 2025',
-      title: 'Event Jakarta Hijrah Fest Bersama Ustadzah Sarah',
-      linkText: 'See More Event',
-    },
-    {
-      image: '/collaboration/collaboration3.png',
+      image: '/collaboration/collaboration-1.png',
       date: 'May, 2025',
-      title: 'Event Bandung Kajian Akhwat Muslimah Hijab Fest',
+      title: 'Event Palembang acara Ustadzah Halimah Alaydrus',
+      linkText: 'See More Event',
+    },
+    {
+      image: '/collaboration/collaboration-2.png',
+      date: 'March, 2025',
+      title: 'Event Medan Bershalawat Ustadzah Ayu Naylul Muna Al Munawwar',
+      linkText: 'See More Event',
+    },
+    {
+      image: '/collaboration/collaboration-3.png',
+      date: 'May, 2025',
+      title: 'Merayakan Hari Kemerdekaan bersama anak-anak penyandang kanker Yayasan Ayah Sarah',
       linkText: 'See More Event',
     },
   ]
 
   return (
-    <div className="relative max-w-8xl mx-20 px-4">
-
-      {/* Custom navigation buttons */}
+    <div className="relative max-w-full md:max-w-8xl mx-0 md:mx-20 px-4">
       <button
         id="prevBtn"
         className="absolute -left-10 top-1/2 z-50 -translate-y-1/2 text-primary text-4xl px-2 py-1 hidden md:block"
@@ -63,13 +61,15 @@ export default function CarouselPastEvent() {
         {slides.map((slide, idx) => (
           <SwiperSlide key={idx}>
             <div className="grid md:grid-cols-2 items-center ">
-              <Image
-                src={slide.image}
-                alt={`Slide ${idx + 1}`}
-                width={600}
-                height={400}
-                className="w-full h-auto object-cover"
-              />
+              <div className="relative w-full pb-[66.66%]">
+                <Image
+                  src={slide.image}
+                  alt={`Slide ${idx + 1}`}
+                  width={600}
+                  height={400}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
               <div className="flex flex-col justify-center bg-primary text-white h-full w-full font-[var(--font-avenir)] bg-[url('/bg-texture.png')] bg-cover p-6 tracking-wide">
                 <div className='mb-10'>
                   <p className="mb-2 text-sm">{slide.date}</p>

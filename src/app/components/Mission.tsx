@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Mission() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 max-w-full gap-6 mt-10 mb-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 max-w-full gap-4 mb-10 px-10">
       <div>
         <Image
           src="/journey1.png"
@@ -16,13 +16,13 @@ export default function Mission() {
           Melibatkan perempuan tangguh di Gunungkidul, sebagai bentuk dukungan terhadap kemandirian dan keberdayaan mereka.
         </p>
       </div>
-      <div className=''>
+      <div className='mt-7'>
         <Image
           src="/journey2.png"
           alt="Dukungan Sosial & Ekonomi"
           width={230}
           height={100}
-          className="rounded-lg mx-auto mb-4 mt-7"
+          className="rounded-lg mx-auto mb-4 "
         />
         <h1 className="mb-4 text-center text-2xl">Dukungan Sosial & Ekonomi Berkelanjutan</h1>
         <p className="text-sm text-center max-w-90 mx-auto">
