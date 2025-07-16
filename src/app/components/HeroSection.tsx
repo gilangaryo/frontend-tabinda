@@ -7,17 +7,17 @@ export default function HeroSection() {
     return (
         <section className="relative h-screen pt-24">
             <Image
-                src="https://res.cloudinary.com/dla5fna8n/image/upload/v1751886997/hero-section3_pvyjam.jpg"
+                src="/hero-section.jpg"
                 alt="Hero background"
                 fill
                 priority
                 className="object-cover object-center -z-10"
             />
 
-            <div className="absolute inset-0 bg-black/20 z-0" />
+            <div className="absolute inset-0 bg-black/30 z-0" />
 
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-white tracking-wider px-4">
-                <div className="grid grid-cols-1 md:grid-cols-4 mb-8 text-center items-center">
+                <div className="grid grid-cols-1 md:grid-cols-4 mb-20 text-center items-center">
                     <div className="text-3xl md:text-2xl text-center md:text-left italic tracking-widest">
                         <h2>Abaya</h2>
                     </div>

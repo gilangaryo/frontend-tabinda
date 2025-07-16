@@ -10,17 +10,17 @@ export default function CollaborationSlider() {
 
     const slides = [
         {
-            image: '/collaboration/head/1.png',
+            image: '/collaboration/head/1.jpg',
             title: 'Event Medan Bershalawat Ustadzah Ayu Naylul Muna Al Munawwar',
             date: 'March, 2025',
         },
         {
-            image: '/collaboration/head/2.png',
+            image: '/collaboration/head/2.jpg',
             title: 'Merayakan Hari Kemerdekaan bersama anak-anak penyandang kanker Yayasan Ayah Sarah',
             date: 'Aug, 2024',
         },
         {
-            image: '/collaboration/head/3.png',
+            image: '/collaboration/head/3.jpg',
             title: 'Event Palembang acara Ustadzah Halimah Alaydrus',
             date: 'May, 2024',
         },

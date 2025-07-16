@@ -1,3 +1,4 @@
+'use client'
 import { VideoPlayer } from '../components/VideoPlayer';
 import Mission from '../components/Mission';
 

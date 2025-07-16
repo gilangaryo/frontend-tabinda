@@ -14,7 +14,7 @@ const products = [
       "Hitam"
     ],
     "image": "/girlie.jpg",
-    "link_tokopedia": "https://tokopedia.com/tabindaofficial",
+    "link_tokopedia": "https://tk.tokopedia.com/ZSB5AcGQJ/",
     "link_shopee": "https://shopee.co.id/tabindaofficial"
   },
   {
@@ -30,7 +30,7 @@ const products = [
       "Hitam"
     ],
     "image": "/bow-bubble.jpg",
-    "link_tokopedia": "https://tokopedia.com/tabindaofficial",
+    "link_tokopedia": "https://tk.tokopedia.com/ZSB5DjAM2/",
     "link_shopee": "https://shopee.co.id/tabindaofficial"
   },
   {
@@ -47,26 +47,26 @@ const products = [
       "Bunga Dot"
     ],
     "image": "/nayanika.jpg",
-    "link_tokopedia": "https://tokopedia.com/tabindaofficial",
+    "link_tokopedia": "https://tk.tokopedia.com/ZSB5DNsUD/",
     "link_shopee": "https://shopee.co.id/tabindaofficial"
   },
-  {
-    "id": 4,
-    "name": "SANDYKALA",
-    "slug": "sandykala",
-    "price": 485000,
-    "description": "Abaya Nayanika hadir dengan desain elegan yang memadukan kesederhanaan dan pesona abadi. Dibuat dari material nyaman dengan furing voile yang sejuk, cocok untuk wanita aktif yang tetap ingin tampil anggun. Dibalut warna hitam pekat, siluet A-line yang menawan, detail payet handmade, dan sentuhan motif di bagian lengan, Nayanika adalah pilihan penuh gaya dan kenyamanan.",
-    "category": "Sawda Abaya",
-    "colors": [
-      "Tweed Abu Abu",
-      "Bunga Silver",
-      "Chiffon Dot",
-      "Bunga Dot"
-    ],
-    "image": "/sandykala.jpg",
-    "link_tokopedia": "https://tokopedia.com/tabindaofficial",
-    "link_shopee": "https://shopee.co.id/tabindaofficial"
-  },
+  // {
+  //   "id": 4,
+  //   "name": "SANDYKALA",
+  //   "slug": "sandykala",
+  //   "price": 485000,
+  //   "description": "Abaya Nayanika hadir dengan desain elegan yang memadukan kesederhanaan dan pesona abadi. Dibuat dari material nyaman dengan furing voile yang sejuk, cocok untuk wanita aktif yang tetap ingin tampil anggun. Dibalut warna hitam pekat, siluet A-line yang menawan, detail payet handmade, dan sentuhan motif di bagian lengan, Nayanika adalah pilihan penuh gaya dan kenyamanan.",
+  //   "category": "Sawda Abaya",
+  //   "colors": [
+  //     "Tweed Abu Abu",
+  //     "Bunga Silver",
+  //     "Chiffon Dot",
+  //     "Bunga Dot"
+  //   ],
+  //   "image": "/sandykala.jpg",
+  //   "link_tokopedia": "https://tokopedia.com/tabindaofficial",
+  //   "link_shopee": "https://shopee.co.id/tabindaofficial"
+  // },
   {
     "id": 5,
     "name": "MAHEERA",
@@ -84,7 +84,7 @@ const products = [
       "Sandcastle"
     ],
     "image": "/maheera.jpg",
-    "link_tokopedia": "https://tokopedia.com/tabindaofficial",
+    "link_tokopedia": "https://tk.tokopedia.com/ZSB5DVMBb/",
     "link_shopee": "https://shopee.co.id/tabindaofficial"
   },
   {
@@ -102,7 +102,7 @@ const products = [
       "Noir"
     ],
     "image": "/mahpara.jpg",
-    "link_tokopedia": "https://tokopedia.com/tabindaofficial",
+    "link_tokopedia": "https://tk.tokopedia.com/ZSB5Dq8eD/",
     "link_shopee": "https://shopee.co.id/tabindaofficial"
   },
   {
@@ -124,7 +124,7 @@ const products = [
       "Dune"
     ],
     "image": "/madina.jpg",
-    "link_tokopedia": "https://tokopedia.com/tabindaofficial",
+    "link_tokopedia": "https://tk.tokopedia.com/ZSB5DQMAt/",
     "link_shopee": "https://shopee.co.id/tabindaofficial"
   },
   {
@@ -141,7 +141,7 @@ const products = [
       "Candy Cloud Glamour Gold"
     ],
     "image": "/candy-cloud.jpg",
-    "link_tokopedia": "https://tokopedia.com/tabindaofficial",
+    "link_tokopedia": "https://tk.tokopedia.com/ZSB5DhNBx/",
     "link_shopee": "https://shopee.co.id/tabindaofficial"
   },
 ];

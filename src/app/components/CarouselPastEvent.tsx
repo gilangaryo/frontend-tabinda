@@ -73,8 +73,8 @@ export default function CarouselPastEvent() {
               <div className="flex flex-col justify-center bg-primary text-white h-full w-full font-[var(--font-avenir)] bg-[url('/bg-texture.png')] bg-cover p-6 tracking-wide">
                 <div className='mb-10'>
                   <p className="mb-2 text-sm">{slide.date}</p>
-                  <h2 className="text-5xl mb-6">{slide.title}</h2>
-                  <a href="#" className="text-lg  underline italic hover:opacity-80">
+                  <h2 className="text-2xl md:text-5xl mb-6">{slide.title}</h2>
+                  <a href="/collaboration" className="text-lg  underline italic hover:opacity-80">
                     {slide.linkText}
                   </a>
                 </div>

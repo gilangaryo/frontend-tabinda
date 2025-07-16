@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import products from '../data/produk_tabinda';
+
 export default function ProductPage() {
   const categories = ['Sawda Abaya', 'Aziza Mukena', 'Alhawa Collection', 'Hijab Series', 'Pashmina Series'];
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -20,15 +21,14 @@ export default function ProductPage() {
   const filteredProducts = activeCategory
     ? products.filter((product) => product.category === activeCategory)
     : products;
+
   return (
     <div className="text-2xl text-primary">
 
-      <section className="py-16 px-4 text-center text-primary">
+      <section className="pt-14 px-4 text-center text-primary">
         <h2 className="text-5xl mb-8">Your Hijab Journey</h2>
-        <h2 className="text-3xl max-w-5xl mx-auto italic mb-10">
-          Tabinda ingin menjadi teman bagi setiap wanita muslim yang sedang menjalani
-          <br className="hidden md:block" />
-          proses hijrah—melalui busana yang elegan, nyaman, dan sesuai syariat.
+        <h2 className="text-2xl md:text-3xl max-w-5xl mx-auto italic mb-10">
+          Tabinda ingin menjadi teman bagi setiap wanita muslim yang sedang menjalani proses hijrah—melalui busana yang elegan, nyaman, dan sesuai syariat.
         </h2>
 
         <div className="flex justify-center flex-wrap gap-4">
@@ -48,21 +48,21 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <section id="products" className="py-10 ">
+      <section id="products" className="py-10">
         <div
-          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 mx-auto max-w-screen-xl justify-items-center
-    transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}
+          className={`px-6 mx-auto max-w-screen-xl transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}
+      ${filteredProducts.length <= 3
+              ? 'flex justify-center flex-wrap gap-8'
+              : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center'}
+    `}
         >
-
           {filteredProducts.map((product, index) => (
             <Link
               key={index}
               href={`/products/${product.slug}`}
-              className={`group relative mb-5 w-full transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'
-                }`}
+              className={`group relative mb-5 w-full max-w-sm transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}
             >
               <div className="text-left relative pb-4">
-                {/* Gambar Produk */}
                 <Image
                   src={`/products/showcase/${product.image.replace('/', '')}`}
                   alt={product.name}
@@ -71,8 +71,6 @@ export default function ProductPage() {
                   className="object-cover mt-4"
                   loading="lazy"
                 />
-
-                {/* Nama, kategori, dan ikon cart dalam satu baris */}
                 <div className="flex justify-between items-center px-2 mt-4">
                   <div>
                     <h1 className="tracking-widest md:text-xl uppercase">{product.name}</h1>
@@ -91,14 +89,12 @@ export default function ProductPage() {
               </div>
             </Link>
           ))}
-
         </div>
 
         {filteredProducts.length === 0 && (
           <p className="text-center text-gray-500 mt-10">Tidak ada produk untuk kategori ini.</p>
         )}
       </section>
-
 
 
     </div>

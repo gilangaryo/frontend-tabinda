@@ -1,3 +1,4 @@
+'use client'
 import CarouselPastEvent from "./CarouselPastEvent";
 
 export default function CollaboartionSection() {
